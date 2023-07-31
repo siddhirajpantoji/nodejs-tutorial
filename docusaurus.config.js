@@ -96,7 +96,7 @@ const config = {
             ],
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Siddhiraj.com, Inc. Built  with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Siddhiraj.com, Inc. Built  with :3 Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
