@@ -25,7 +25,7 @@ Node.js is commonly used for building real-time applications like chat servers, 
 
 ## Installation of Node.js
 To get started with Node.js, you'll need to install it on your machine. If you have already installed it on your machine then skip this
-Visit the [official Node.js website](https://nodejs.org/en/download) and download the installer for your operating system. Follow the installation instructions, and you'll be ready to go. I will be covering Intsallation in Detail in further [Section](./installation-of-node-js) 
+Visit the [official Node.js website](https://nodejs.org/en/download) and download the installer for your operating system. Follow the installation instructions, and you'll be ready to go. I will be covering Intsallation in Detail in further [Section](/docs/Fundalmentals/installation-of-node-js) 
 ```shell
 node --version
 ```
