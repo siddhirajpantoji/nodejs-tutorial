@@ -4,12 +4,11 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Hands On Approach',
+    Svg: require('@site/static/img/code-github-hosting-svgrepo-com.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        All code Samples Readily Available on Github With links to <a href='#'>code</a>
       </>
     ),
   },
@@ -18,8 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Focus on what is really needed for Coding with Challenging Exercises 
       </>
     ),
   },
