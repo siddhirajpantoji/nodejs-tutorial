@@ -21,7 +21,8 @@ const sidebars = {
     Fundamentals: [
       'Fundamentals/index',
       'Fundamentals/installation-of-node-js',
-      'Fundamentals/setup-ide-for-coding'
+      'Fundamentals/setup-ide-for-coding',
+      'Fundamentals/first-node-js-app'
     ],
     
   }]
