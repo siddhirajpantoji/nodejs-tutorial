@@ -20,7 +20,8 @@ const sidebars = {
   tutorialSidebar: [{
     Fundamentals: [
       'Fundamentals/index',
-      'Fundamentals/installation-of-node-js'
+      'Fundamentals/installation-of-node-js',
+      'Fundamentals/setup-ide-for-coding'
     ],
     
   }]
