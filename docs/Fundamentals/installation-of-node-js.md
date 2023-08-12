@@ -2,14 +2,9 @@
 id: installation-of-node-js
 title: Installation of Node.js
 sidebar_label: Installation
-slug: /installation-node
+slug: /installation-of-node-js
 ---
 Node JS installations differ on Diffrent Operating Systems. We will go through Step by Step Progress 
-
-
-1. [Download the installation package](#download-the-installation-package) 
-2. [Install the package](#install-the-package)
-3. [Verify Installation on your System](#verify-installation-of-nodejs-and-npm)
 
 ## Download the installation package
 Visit official [Node.js Website](https://nodejs.org/en) .
