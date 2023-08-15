@@ -103,17 +103,18 @@ let name = "Ram";
 console.log( `Jai Shri ${name}` ); // Jai Shri Ram
 
 // embed an expression
-console.log( `the result is *!*${1 + 2}*/!*` ); // the result is 3
+console.log( `Hanuman x  ${1 + 2}` ); // the result is 3
 ```
 
 
 The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
 
+:::info
 Please note that this can only be done in backticks. Other quotes don't have this embedding functionality!
 ```js
-console.log( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
+console.log( "Raghunath ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
 ```
-
+:::
 We'll cover strings more thoroughly in the String Chapter Later.
 
 :::info There is no *character* type
@@ -121,3 +122,42 @@ In some languages, there is a special "character" type for a single character. F
 
 In JavaScript, there is no such type. There's only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
 :::
+
+## Boolean (logical type)
+
+The boolean type has only two values: `true` and `false`.
+
+This type is commonly used to store yes/no values: `true` means "yes, correct", and `false` means "no, incorrect".
+
+For instance:
+
+```js
+let shriRam = true; // yes, name field is checked
+let ravanIsHero = false; // no, age field is not checked
+```
+
+Boolean values also come as a result of comparisons:
+
+```js run
+let isGreater = 4 > 1;
+
+console.log( isGreater ); // true (the comparison result is "yes")
+```
+
+We'll cover booleans more deeply in the chapter covering conditions .
+
+## The "null" value
+
+The special `null` value does not belong to any of the types described above.
+
+It forms a separate type of its own which contains only the `null` value:
+
+```js
+let age = null;
+```
+
+In JavaScript, `null` is not a "reference to a non-existing object" or a "null pointer" like in some other languages.
+
+It's just a special value which represents "nothing", "empty" or "value unknown".
+
+The code above states that `age` is unknown.
