@@ -71,4 +71,53 @@ The script will never stop with a fatal error ("die"). At worst, we'll get `NaN`
 
 Special numeric values formally belong to the "number" type. Of course they are not numbers in the common sense of this word.
 
-We'll see more about working with numbers in the chapter.
+We'll see more about working with numbers in the chapter later 
+
+## String
+
+A string in JavaScript must be surrounded by quotes.
+
+```js
+let str = "Ram";
+let str2 = 'Siya var Ram chandra ki jay';
+let phrase = `Jai Shri ${str}`;
+console.log(str)
+console.log(str2)
+console.log(phrase)
+```
+
+In JavaScript, there are 3 types of quotes.
+
+1. Double quotes: `"Siya Ram"`.
+2. Single quotes: `'Siya Ram'`.
+3. Backticks: <code>&#96;Siya Ram&#96;</code>.
+
+Double and single quotes are "simple" quotes. There's practically no difference between them in JavaScript.
+
+Backticks are "extended functionality" quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
+
+```js run
+let name = "Ram";
+
+// embed a variable
+console.log( `Jai Shri ${name}` ); // Jai Shri Ram
+
+// embed an expression
+console.log( `the result is *!*${1 + 2}*/!*` ); // the result is 3
+```
+
+
+The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
+
+Please note that this can only be done in backticks. Other quotes don't have this embedding functionality!
+```js
+console.log( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
+```
+
+We'll cover strings more thoroughly in the String Chapter Later.
+
+:::info There is no *character* type
+In some languages, there is a special "character" type for a single character. For example, in the C language and in Java it is called "char".
+
+In JavaScript, there is no such type. There's only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
+:::
