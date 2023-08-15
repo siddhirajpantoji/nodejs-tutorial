@@ -30,6 +30,7 @@ Should give npm version installed. Mine is **9.5.1**
 
 ## Writing a Hello world program
 Simple code to print Hello World on Console 
+
 Create a simple file *hello-world.js* in a folder and write Below code in it 
 ```js
 console.log("Hello World!")
@@ -42,6 +43,7 @@ Output of Below Program is
 ```shell
 Hello World!
 ```
+
 You can find above code in ***[this](/code-snippets/Fundamentals/hello-world.js)*** file 
 
 

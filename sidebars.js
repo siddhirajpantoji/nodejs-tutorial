@@ -18,13 +18,15 @@ const sidebars = {
 
   // But you can create a sidebar manually
   tutorialSidebar: [{
-    Fundamentals: [
-      'Fundamentals/index',
-      'Fundamentals/installation-of-node-js',
-      'Fundamentals/setup-ide-for-coding',
-      'Fundamentals/first-node-js-app',
-      'Fundamentals/basics-of-javascript'
+    Introduction: [
+      'Introduction/index',
+      'Introduction/installation-of-node-js',
+      'Introduction/setup-ide-for-coding',
+      'Introduction/first-node-js-app',
     ],
+    Basics:[
+      "Basics/variables"
+    ]
     
   }]
 
