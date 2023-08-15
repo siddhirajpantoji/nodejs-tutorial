@@ -95,5 +95,5 @@ There are subtle differences between let and var, but they do not matter for us 
 
 We can easily grasp the concept of a “variable” if we imagine it as a “box” for data, with a uniquely-named sticker on it.
 
-For instance, the variable `heart` can be imagined as a box labeled `"heart"` with the value `"Ram"`` in it:
+For instance, the variable `heart` can be imagined as a box labeled `"heart"` with the value `"Ram"` in it:
 ![](variable.svg)
