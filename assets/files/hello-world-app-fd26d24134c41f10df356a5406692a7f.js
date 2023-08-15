@@ -1,0 +1,1 @@
+const http=require("http"),hostname="127.0.0.1",port=3e3,server=http.createServer(((e,t)=>{t.statusCode=200,t.setHeader("Content-Type","text/plain"),t.end("Hello, World!")}));server.listen(3e3,hostname,(()=>{console.log(`Server running at http://${hostname}:3000/`)}));
