@@ -224,7 +224,7 @@ Normally, we need to define a variable before using it. But in the old times, it
 
 num = 5; // the variable "num" is created if it didn't exist
 
-alert(num); // 5
+console.log(num); // 5
 ```
 
 This is a bad practice and would cause an error in strict mode:
