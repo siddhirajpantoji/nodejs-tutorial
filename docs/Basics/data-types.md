@@ -11,6 +11,7 @@ A value in JavaScript is always of a certain type. For example, a string or a nu
 There are eight basic data types in JavaScript. Here, we'll cover them in general and in the next chapters we'll talk about each of them in detail.
 
 We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
+This is a basic Introduction to get you started 
 
 ```js
 // no error
@@ -70,4 +71,4 @@ The script will never stop with a fatal error ("die"). At worst, we'll get `NaN`
 
 Special numeric values formally belong to the "number" type. Of course they are not numbers in the common sense of this word.
 
-We'll see more about working with numbers in the chapter <info:number>.
+We'll see more about working with numbers in the chapter.
