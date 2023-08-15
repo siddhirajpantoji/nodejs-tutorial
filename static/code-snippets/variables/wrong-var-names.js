@@ -1,3 +1,4 @@
-let 1a; // cannot start with a digit
+// Uncomment the code Below 
+// let 1a; // cannot start with a digit
 
-let my-name; // hyphens '-' aren't allowed in the name
+// let my-name; // hyphens '-' aren't allowed in the name

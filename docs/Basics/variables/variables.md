@@ -166,7 +166,7 @@ When the name contains multiple words, [camelCase](https://en.wikipedia.org/wiki
 What's interesting -- the dollar sign `'$'` and the underscore `'_'` can also be used in names. They are regular symbols, just like letters, without any special meaning.
 
 
-These names are valid refer [Example](code-snippets/variables/declaration.js):
+These names are valid refer [Example](/code-snippets/variables/declaration.js):
 
 ```js 
 let $ = 1; // declared a variable with the name "$"
@@ -176,7 +176,7 @@ console.log($ + _); // 3
 ```
 
 
-[Example](code-snippets/variables/wrong-var-names.js) of incorrect variable names:
+[Example](/code-snippets/variables/wrong-var-names.js) of incorrect variable names:
 
 ```js 
 let 1a; // cannot start with a digit

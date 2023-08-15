@@ -28,7 +28,7 @@ server.listen(port, hostname, () => {
 
 ```
 
-You can find the file **[here](code-snippets/Fundamentals/hello-world-app.js)** which you can easily copy in your local machine 
+You can find the file **[here](/code-snippets/Fundamentals/hello-world-app.js)** which you can easily copy in your local machine 
 
 We will be understanding all concepts one by one in Further Sections 
 ## Run the application 
