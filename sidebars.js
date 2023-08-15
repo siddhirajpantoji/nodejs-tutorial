@@ -25,7 +25,7 @@ const sidebars = {
       'Introduction/first-node-js-app',
     ],
     Basics:[
-      "Basics/variables"
+      "Basics/variables/variables"
     ]
     
   }]
