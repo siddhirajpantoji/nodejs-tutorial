@@ -255,6 +255,10 @@ Usually, such parentheses contain a mathematical expression, such as `(2 + 2)`, 
 Some people prefer `typeof(x)`, although the `typeof x` syntax is much more common.
 :::
 
+## Summary
+
+There are 6 basic data types in JavaScript.
+
 - Six primitive data types:
     - `number` for numbers of any kind: integer or floating-point, integers are limited by <code>±(2<sup>53</sup>-1)</code>.
     - `string` for strings. A string may have zero or more characters, there's no separate single-character type.
