@@ -254,3 +254,21 @@ Usually, such parentheses contain a mathematical expression, such as `(2 + 2)`, 
 
 Some people prefer `typeof(x)`, although the `typeof x` syntax is much more common.
 :::
+
+- Six primitive data types:
+    - `number` for numbers of any kind: integer or floating-point, integers are limited by <code>±(2<sup>53</sup>-1)</code>.
+    - `string` for strings. A string may have zero or more characters, there's no separate single-character type.
+    - `boolean` for `true`/`false`.
+    - `null` for unknown values -- a standalone type that has a single value `null`.
+    - `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
+    - `symbol` for unique identifiers.
+- And one non-primitive data type:
+    - `object` for more complex data structures.
+
+The `typeof` operator allows us to see which type is stored in a variable.
+
+- Usually used as `typeof x`, but `typeof(x)` is also possible.
+- Returns a string with the name of the type, like `"string"`.
+- For `null` returns `"object"` -- this is an error in the language, it's not actually an object.
+
+In the next chapters, we'll concentrate on primitive values and once we're familiar with them, we'll move on to objects.
