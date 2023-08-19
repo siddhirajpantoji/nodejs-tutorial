@@ -15,7 +15,7 @@ This is a basic Introduction to get you started
 
 ```js
 // no error
-let message = "Ram";
+let message = "Jai Shri Ram";
 message = 123456;
 ```
 
