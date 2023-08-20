@@ -18,19 +18,18 @@ The `if(...)` statement evaluates a condition in parentheses and, if the result 
 For example:
 
 ```js
-let year = prompt('In which year was ECMAScript-2015 specification published?', '');
-
+let year = 2023
 // highlight-start
-if (year == 2015) console.log( 'You are right!' );
+if (year == 2023) console.log( 'You are right!' );
 // highlight-end
 ```
 
-In the example above, the condition is a simple equality check (`year == 2015`), but it can be much more complex.
+In the example above, the condition is a simple equality check (`year == 2023`), but it can be much more complex.
 
 If we want to execute more than one statement, we have to wrap our code block inside curly braces:
 
 ```js
-if (year == 2015) {
+if (year == 2023) {
   console.log( "That's correct!" );
   console.log( "You're so smart!" );
 }
@@ -79,9 +78,9 @@ The `if` statement may contain an optional `else` block. It executes when the co
 
 For example:
 ```js 
-let year = prompt('In which year was the ECMAScript-2015 specification published?', '');
+let year = 2023
 
-if (year == 2015) {
+if (year == 2023) {
   console.log( 'You guessed it right!' );
 } else {
   console.log( 'How can you be so wrong?' ); // any value except 2015
@@ -95,18 +94,17 @@ Sometimes, we'd like to test several variants of a condition. The `else if` clau
 For example:
 
 ```js
-let year = prompt('In which year was the ECMAScript-2015 specification published?', '');
-
-if (year < 2015) {
+let year =  2023
+if (year < 2023) {
   console.log( 'Too early...' );
-} else if (year > 2015) {
+} else if (year > 2023) {
   console.log( 'Too late' );
 } else {
   console.log( 'Exactly!' );
 }
 ```
 
-In the code above, JavaScript first checks `year < 2015`. If that is falsy, it goes to the next condition `year > 2015`. If that is also falsy, it shows the last `console.log`.
+In the code above, JavaScript first checks `year < 2023`. If that is falsy, it goes to the next condition `year > 2023`. If that is also falsy, it shows the last `console.log`.
 
 There can be more `else if` blocks. The final `else` is optional.
 
@@ -118,7 +116,7 @@ For instance:
 
 ```js no-beautify
 let accessAllowed;
-let age = prompt('How old are you?', '');
+let age = 33
 
 // highlight-start
 if (age > 18) {
@@ -175,7 +173,7 @@ A sequence of question mark operators `?` can return a value that depends on mor
 
 For instance:
 ```js
-let age = prompt('age?', 18);
+let age = 33
 
 let message = (age < 3) ? 'Hi, baby!' :
   (age < 18) ? 'Hello!' :
@@ -211,8 +209,8 @@ if (age < 3) {
 Sometimes the question mark `?` is used as a replacement for `if`:
 
 ```js no-beautify
-let company = prompt('Which company created JavaScript?', '');
-
+let company = 'Netscape'
+// Company that created javascript
 // highlight-start
 (company == 'Netscape') ?
    console.log('Right!') : console.log('Wrong.');
@@ -229,8 +227,8 @@ The notation is shorter than the equivalent `if` statement, which appeals to som
 
 Here is the same code using `if` for comparison:
 
-```js no-beautify
-let company = prompt('Which company created JavaScript?', '');
+```js 
+let company = 'Netscape'
 
 // highlight-start
 if (company == 'Netscape') {
