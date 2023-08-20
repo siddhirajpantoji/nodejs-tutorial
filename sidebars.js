@@ -27,7 +27,8 @@ const sidebars = {
     Basics:[
       "Basics/variables/variables",
       "Basics/data-types",
-      "Basics/type-conversions"
+      "Basics/type-conversions",
+      "Basics/operators"
     ]
     
   }]
