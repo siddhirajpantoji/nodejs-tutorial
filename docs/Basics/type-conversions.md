@@ -152,4 +152,4 @@ Most of these rules are easy to understand and memorize. The notable exceptions 
 - `undefined` is `NaN` as a number, not `0`.
 - `"0"` and space-only strings like `"   "` are true as a boolean.
 
-Objects aren't covered here. We'll return to them later in the chapter <info:object-toprimitive> that is devoted exclusively to objects after we learn more basic things about JavaScript.
+Objects aren't covered here. We'll return to them later in the chapter that is devoted exclusively to objects after we learn more basic things about JavaScript.

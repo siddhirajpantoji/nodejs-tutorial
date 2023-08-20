@@ -4,7 +4,6 @@ title: Operators
 sidebar_label: Operators 
 slug: /operators
 ---
-
 # Basic operators, maths
 
 We know many operators from school. They are things like addition `+`, multiplication `*`, subtraction `-`, and so on.
@@ -20,7 +19,10 @@ Before we move on, let's grasp some common terminology.
 
     ```js
     let x = 1;
+
+    // highlight-start
     x = -x;
+    // highlight-end
     console.log( x ); // -1, unary negation was applied
     ```
 - An operator is *binary* if it has two operands. The same minus exists in binary form as well:
@@ -53,7 +55,7 @@ The result of `a % b` is the [remainder](https://en.wikipedia.org/wiki/Remainder
 
 For instance:
 
-```js run
+```js 
 console.log( 5 % 2 ); // 1, the remainder of 5 divided by 2
 console.log( 8 % 3 ); // 2, the remainder of 8 divided by 3
 console.log( 8 % 4 ); // 0, the remainder of 8 divided by 4
@@ -67,7 +69,7 @@ In school maths, we write that as a<sup>b</sup>.
 
 For instance:
 
-```js run
+```js
 console.log( 2 ** 2 ); // 2² = 4
 console.log( 2 ** 3 ); // 2³ = 8
 console.log( 2 ** 4 ); // 2⁴ = 16
@@ -77,7 +79,7 @@ Just like in maths, the exponentiation operator is defined for non-integer numbe
 
 For example, a square root is an exponentiation by ½:
 
-```js run
+```js
 console.log( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root)
 console.log( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
 ```
@@ -100,7 +102,7 @@ Note that if any of the operands is a string, then the other one is converted to
 
 For example:
 
-```js run
+```js
 console.log( '1' + 2 ); // "12"
 console.log( 2 + '1' ); // "21"
 ```
@@ -109,13 +111,13 @@ See, it doesn't matter whether the first operand is a string or the second one.
 
 Here's a more complex example:
 
-```js run
+```js
 console.log(2 + 2 + '1' ); // "41" and not "221"
 ```
 
 Here, operators work one after another. The first `+` sums two numbers, so it returns `4`, then the next `+` adds the string `1` to it, so it's like `4 + '1' = '41'`.
 
-```js run
+```js
 console.log('1' + 2 + 2); // "122" and not "14"
 ```
 Here, the first operand is a string, the compiler treats the other two operands as strings too. The `2` gets concatenated to `'1'`, so it's like `'1' + 2 = "12"` and `"12" + 2 = "122"`.
@@ -124,7 +126,7 @@ The binary `+` is the only operator that supports strings in such a way. Other a
 
 Here's the demo for subtraction and division:
 
-```js run
+```js
 console.log( 6 - '2' ); // 4, converts '2' to a number
 console.log( '6' / '2' ); // 3, converts both operands to numbers
 ```
@@ -137,7 +139,7 @@ The unary plus or, in other words, the plus operator `+` applied to a single val
 
 For example:
 
-```js run
+```js
 // No effect on numbers
 let x = 1;
 console.log( +x ); // 1
@@ -145,11 +147,11 @@ console.log( +x ); // 1
 let y = -2;
 console.log( +y ); // -2
 
-*!*
+// highlight-start
 // Converts non-numbers
 console.log( +true ); // 1
 console.log( +"" );   // 0
-*/!*
+// highlight-end
 ```
 
 It actually does the same thing as `Number(...)`, but is shorter.
@@ -158,7 +160,7 @@ The need to convert strings to numbers arises very often. For example, if we are
 
 The binary plus would add them as strings:
 
-```js run
+```js
 let apples = "2";
 let oranges = "3";
 
@@ -167,14 +169,14 @@ console.log( apples + oranges ); // "23", the binary plus concatenates strings
 
 If we want to treat them as numbers, we need to convert and then sum them:
 
-```js run
+```js
 let apples = "2";
 let oranges = "3";
 
-*!*
+// highlight-start
 // both values converted to numbers before the binary plus
 console.log( +apples + +oranges ); // 5
-*/!*
+// highlight-end
 
 // the longer variant
 // console.log( Number(apples) + Number(oranges) ); // 5
@@ -234,13 +236,13 @@ The call `x = value` writes the `value` into `x` *and then returns it*.
 
 Here's a demo that uses an assignment as part of a more complex expression:
 
-```js run
+```js
 let a = 1;
 let b = 2;
 
-*!*
+// highlight-start
 let c = 3 - (a = b + 1);
-*/!*
+// highlight-end
 
 console.log( a ); // 3
 console.log( c ); // 0
@@ -256,12 +258,12 @@ Although, please don't write the code like that. Such tricks definitely don't ma
 
 Another interesting feature is the ability to chain assignments:
 
-```js run
+```js
 let a, b, c;
 
-*!*
+// highlight-start
 a = b = c = 2 + 2;
-*/!*
+// highlight-end
 
 console.log( a ); // 4
 console.log( b ); // 4
@@ -293,7 +295,7 @@ n = n * 2;
 
 This notation can be shortened using the operators `+=` and `*=`:
 
-```js run
+```js
 let n = 2;
 n += 5; // now n = 7 (same as n = n + 5)
 n *= 2; // now n = 14 (same as n = n * 2)
@@ -305,7 +307,7 @@ Short "modify-and-assign" operators exist for all arithmetical and bitwise opera
 
 Such operators have the same precedence as a normal assignment, so they run after most other calculations:
 
-```js run
+```js
 let n = 2;
 
 n *= 3 + 5; // right part evaluated first, same as n *= 8
@@ -323,14 +325,14 @@ So, there are special operators for it:
 
 - **Increment** `++` increases a variable by 1:
 
-    ```js run no-beautify
+    ```js no-beautify
     let counter = 2;
     counter++;        // works the same as counter = counter + 1, but is shorter
     console.log( counter ); // 3
     ```
 - **Decrement** `--` decreases a variable by 1:
 
-    ```js run no-beautify
+    ```js no-beautify
     let counter = 2;
     counter--;        // works the same as counter = counter - 1, but is shorter
     console.log( counter ); // 1
@@ -353,22 +355,22 @@ Let's clarify. As we know, all operators return a value. Increment/decrement is 
 
 To see the difference, here's an example:
 
-```js run
+```js
 let counter = 1;
 let a = ++counter; // (*)
 
-console.log(a); // *!*2*/!*
+console.log(a); // // highlight-start2// highlight-end
 ```
 
 In the line `(*)`, the *prefix* form `++counter` increments `counter` and returns the new value, `2`. So, the `console.log` shows `2`.
 
 Now, let's use the postfix form:
 
-```js run
+```js
 let counter = 1;
 let a = counter++; // (*) changed ++counter to counter++
 
-console.log(a); // *!*1*/!*
+console.log(a); // // highlight-start1// highlight-end
 ```
 
 In the line `(*)`, the *postfix* form `counter++` also increments `counter` but returns the *old* value (prior to increment). So, the `console.log` shows `1`.
@@ -377,7 +379,7 @@ To summarize:
 
 - If the result of increment/decrement is not used, there is no difference in which form to use:
 
-    ```js run
+    ```js
     let counter = 0;
     counter++;
     ++counter;
@@ -385,13 +387,13 @@ To summarize:
     ```
 - If we'd like to increase a value *and* immediately use the result of the operator, we need the prefix form:
 
-    ```js run
+    ```js
     let counter = 0;
     console.log( ++counter ); // 1
     ```
 - If we'd like to increment a value but use its previous value, we need the postfix form:
 
-    ```js run
+    ```js
     let counter = 0;
     console.log( counter++ ); // 0
     ```
@@ -401,14 +403,14 @@ The operators `++/--` can be used inside expressions as well. Their precedence i
 
 For instance:
 
-```js run
+```js
 let counter = 1;
 console.log( 2 * ++counter ); // 4
 ```
 
 Compare with:
 
-```js run
+```js
 let counter = 1;
 console.log( 2 * counter++ ); // 2, because counter++ returns the "old" value
 ```
@@ -419,7 +421,7 @@ While reading code, a fast "vertical" eye-scan can easily miss something like `c
 
 We advise a style of "one line -- one action":
 
-```js run
+```js
 let counter = 1;
 console.log( 2 * counter );
 counter++;
@@ -452,10 +454,10 @@ The comma operator allows us to evaluate several expressions, dividing them with
 
 For example:
 
-```js run
-*!*
+```js
+// highlight-start
 let a = (1 + 2, 3 + 4);
-*/!*
+// highlight-end
 
 console.log( a ); // 7 (the result of 3 + 4)
 ```
@@ -476,7 +478,7 @@ For example:
 
 ```js
 // three operations in one line
-for (*!*a = 1, b = 3, c = a * b*/!*; a < 10; a++) {
+for ( a = 1, b = 3, c = a * b ; a < 10; a++) {
  ...
 }
 ```

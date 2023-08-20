@@ -26,7 +26,7 @@ Now, we can put some data into it by using the assignment operator =:
 
 ```js
 let message;
-
+// highlight-next-line
 message = 'Shree'; // store the string 'Shree' in the variable named message
 ```
 The string is now saved into the memory area associated with the variable. We can access it using the variable name:
@@ -34,11 +34,13 @@ The string is now saved into the memory area associated with the variable. We ca
 ```js
 let message;
 message = '!!Shree!!';
+// highlight-next-line
 console.log(message); // shows the variable content
 ```
 
 To be concise, we can combine the variable declaration and assignment into a single line:
 ```js
+// highlight-next-line
 let message = '||Shree||'; // define the variable and assign the value
 
 console.log(message); // ||Shree||
@@ -106,7 +108,7 @@ We can also change it as many times as we want:
 let heart;
 
 heart = 'Gussa!';
-
+// highlight-next-line
 heart = 'Ram Ram'; // value changed
 
 console.log(heart);
@@ -124,6 +126,7 @@ let message;
 
 
 // copy 'Siya Ram' from hello into message
+// highlight-next-line
 message = hello;
 
 // now two variables hold the same data
@@ -141,7 +144,9 @@ A repeated declaration of the same variable is an error:
 let message = "Krodh";
 
 // repeated 'let' leads to an error
+// highlight-next-line
 let message = "Matsar"; // SyntaxError: 'message' has already been declared
+
 ```
 So, we should declare a variable once and then refer to it without `let`.
 :::
@@ -166,7 +171,7 @@ When the name contains multiple words, [camelCase](https://en.wikipedia.org/wiki
 What's interesting -- the dollar sign `'$'` and the underscore `'_'` can also be used in names. They are regular symbols, just like letters, without any special meaning.
 
 
-These names are valid refer [Example](/code-snippets/variables/declaration.js):
+These names are valid refer [Example](https://github.com/siddhirajpantoji/nodejs-tutorial/blob/main/static/code-snippets/variables/declaration.js):
 
 ```js 
 let $ = 1; // declared a variable with the name "$"
@@ -176,7 +181,7 @@ console.log($ + _); // 3
 ```
 
 
-[Example](/code-snippets/variables/wrong-var-names.js) of incorrect variable names:
+[Example](https://github.com/siddhirajpantoji/nodejs-tutorial/blob/main/static/code-snippets/variables/wrong-var-names.js) of incorrect variable names:
 
 ```js 
 let 1a; // cannot start with a digit
@@ -204,7 +209,7 @@ Technically, there is no error here. Such names are allowed, but there is an int
 
 :::caution Reserved Names
 
-There is a [list of reserved words](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), which cannot be used as variable names because they are used by the language itself.
+There is a **[list of reserved words](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)**, which cannot be used as variable names because they are used by the language itself.
 
 For example: `let`, `class`, `return`, and `function` are reserved.
 

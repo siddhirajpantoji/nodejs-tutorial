@@ -44,7 +44,7 @@ Output of Below Program is
 Hello World!
 ```
 
-You can find above code in ***[this](/code-snippets/Fundamentals/hello-world.js)*** file 
+You can find above code in ***[this](https://github.com/siddhirajpantoji/nodejs-tutorial/blob/main/static/code-snippets/Fundamentals/hello-world.js)*** file 
 
 
 ## Next Steps 

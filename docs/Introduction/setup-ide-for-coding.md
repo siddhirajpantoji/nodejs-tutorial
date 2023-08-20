@@ -40,5 +40,5 @@ For opening and Hiding terminal
 
 For More [Tips and Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks)
 :::tip
-For Keyboard Shortcuts in [Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf),[macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf),[Linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)  
+For Keyboard Shortcuts in **[Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf),[macOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf),[Linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf) **
 :::
