@@ -111,7 +111,7 @@ const config = {
           {
             className: 'code-block-error-line',
             line: 'error-next-line',
-            block: {start: 'highlight-start', end: 'highlight-end'}
+            block: {start: 'error-start', end: 'error-end'}
           },
         ],
       },
