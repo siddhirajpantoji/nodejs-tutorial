@@ -1,1 +1,0 @@
-let $=1,_=2;console.log($+_);
