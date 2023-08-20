@@ -28,7 +28,10 @@ const sidebars = {
       "Basics/variables/variables",
       "Basics/data-types",
       "Basics/type-conversions",
-      "Basics/operators"
+      "Basics/operators",
+      "Basics/comparison",
+      "Basics/if-else",
+      "Basics/logical-operators"
     ]
     
   }]
