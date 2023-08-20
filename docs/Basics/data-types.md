@@ -36,11 +36,11 @@ Besides regular numbers, there are so-called "special numeric values" which also
 
 - `Infinity` represents the mathematical [Infinity](https://en.wikipedia.org/wiki/Infinity) ∞. It is a special value that's greater than any number.
 
-    We can get it as a result of division by zero:  [code](/code-snippets/variables/infinite.js)
+    We can get it as a result of division by zero:  [code](https://github.com/siddhirajpantoji/nodejs-tutorial/blob/main/static/code-snippets/variables/infinite.js)
     ```js
         console.log( 1 / 0 ); // Infinity
     ```
-    Or just reference it directly: [code](/code-snippets/variables/infinite-direct.js)
+    Or just reference it directly: [code](https://github.com/siddhirajpantoji/nodejs-tutorial/blob/main/static/code-snippets/variables/infinite-direct.js)
     
     ```js
     console.log(Infinity)
