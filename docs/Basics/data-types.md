@@ -173,7 +173,7 @@ If a variable is declared, but not assigned, then its value is `undefined`:
 ```js 
 let age;
 
-alert(age); // shows "undefined"
+console.log(age); // shows "undefined"
 ```
 
 Technically, it is possible to explicitly assign `undefined` to a variable:

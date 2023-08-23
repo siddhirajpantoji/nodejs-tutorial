@@ -216,7 +216,9 @@ For example: `let`, `class`, `return`, and `function` are reserved.
 The code below gives a syntax error:
 
 ```js
+// error-next-line
 let let = 5; // can't name a variable "let", error!
+// error-next-line
 let return = 5; // also can't name it "return", error!
 ```
 :::
@@ -235,6 +237,7 @@ console.log(num); // 5
 This is a bad practice and would cause an error in strict mode:
 ```js
 "use strict";
+// error-next-line
 num = 5; // error: num is not defined
 ```
 :::
@@ -250,7 +253,7 @@ Variables declared using `const` are called "constants". They cannot be reassign
 
 ```js
 const myBirthday = '27.07.1990';
-
+// error-next-line
 myBirthday = '01.01.2001'; // error, can't reassign the constant!
 ```
 
