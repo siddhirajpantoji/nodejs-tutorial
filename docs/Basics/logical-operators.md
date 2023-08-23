@@ -293,3 +293,80 @@ console.log( Boolean(null) ); // false
 ```
 
 The precedence of NOT `!` is the highest of all logical operators, so it always executes first, before `&&` or `||`.
+
+
+## Test Questions
+
+### What's the result of OR?
+
+What is the code below going to output?
+
+```js
+alert( null || 2 || undefined );
+```
+
+### What's the result of OR'ed alerts?
+
+What will the code below output?
+
+```js
+alert( alert(1) || 2 || alert(3) );
+```
+
+
+### What is the result of AND?
+
+What is this code going to show?
+
+```js
+alert( 1 && null && 2 );
+```
+
+
+
+### What is the result of AND'ed alerts?
+
+What will this code show?
+
+```js
+alert( alert(1) && alert(2) );
+```
+
+
+
+### The result of OR AND OR
+
+What will the result be?
+
+```js
+alert( null || 2 && 3 || 4 );
+```
+
+
+### Check the range between
+
+Write an `if` condition to check that `age` is between `14` and `90` inclusively.
+
+"Inclusively" means that `age` can reach the edges `14` or `90`.
+
+
+### Check the range outside
+
+Write an `if` condition to check that `age` is NOT between `14` and `90` inclusively.
+
+Create two variants: the first one using NOT `!`, the second one -- without it.
+
+
+### A question about "if"
+
+Which of these `alert`s are going to execute?
+
+What will the results of the expressions be inside `if(...)`?
+
+```js
+if (-1 || 0) alert( 'first' );
+if (-1 && 0) alert( 'second' );
+if (null || -1 && 1) alert( 'third' );
+```
+
+
