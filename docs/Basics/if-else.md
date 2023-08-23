@@ -242,3 +242,60 @@ if (company == 'Netscape') {
 Our eyes scan the code vertically. Code blocks which span several lines are easier to understand than a long, horizontal instruction set.
 
 The purpose of the question mark operator `?` is to return one value or another depending on its condition. Please use it for exactly that. Use `if` when you need to execute different branches of code.
+
+
+## Test Questions
+### if (a string with zero)
+
+Will `console.log` be shown?
+
+```js
+if ("0") {
+  console.log( 'Hello' );
+}
+```
+
+### Show the sign
+
+Using `if..else`, write the code which gets a number via `console` and then shows in `console.log`:
+
+- `1`, if the value is greater than zero,
+- `-1`, if less than zero,
+- `0`, if equals zero.
+
+In this task we assume that the input is always a number use `parseInt`.
+
+### Rewrite 'if' into '?'
+
+Rewrite this `if` using the conditional operator `'?'`:
+
+```js
+let result;
+
+if (a + b < 4) {
+  result = 'Below';
+} else {
+  result = 'Over';
+}
+```
+
+
+### Rewrite 'if..else' into '?'
+
+Rewrite `if..else` using multiple ternary operators `'?'`.
+
+For readability, it's recommended to split the code into multiple lines.
+
+```js
+let message;
+
+if (login == 'Employee') {
+  message = 'Hello';
+} else if (login == 'Director') {
+  message = 'Greetings';
+} else if (login == '') {
+  message = 'No login';
+} else {
+  message = '';
+}
+```
