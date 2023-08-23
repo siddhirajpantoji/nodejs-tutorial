@@ -302,15 +302,15 @@ The precedence of NOT `!` is the highest of all logical operators, so it always 
 What is the code below going to output?
 
 ```js
-alert( null || 2 || undefined );
+console.log( null || 2 || undefined );
 ```
 
-### What's the result of OR'ed alerts?
+### What's the result of OR'ed console.logs?
 
 What will the code below output?
 
 ```js
-alert( alert(1) || 2 || alert(3) );
+console.log( console.log(1) || 2 || console.log(3) );
 ```
 
 
@@ -319,17 +319,17 @@ alert( alert(1) || 2 || alert(3) );
 What is this code going to show?
 
 ```js
-alert( 1 && null && 2 );
+console.log( 1 && null && 2 );
 ```
 
 
 
-### What is the result of AND'ed alerts?
+### What is the result of AND'ed console.logs?
 
 What will this code show?
 
 ```js
-alert( alert(1) && alert(2) );
+console.log( console.log(1) && console.log(2) );
 ```
 
 
@@ -339,7 +339,7 @@ alert( alert(1) && alert(2) );
 What will the result be?
 
 ```js
-alert( null || 2 && 3 || 4 );
+console.log( null || 2 && 3 || 4 );
 ```
 
 
@@ -359,14 +359,14 @@ Create two variants: the first one using NOT `!`, the second one -- without it.
 
 ### A question about "if"
 
-Which of these `alert`s are going to execute?
+Which of these `console.log`s are going to execute?
 
 What will the results of the expressions be inside `if(...)`?
 
 ```js
-if (-1 || 0) alert( 'first' );
-if (-1 && 0) alert( 'second' );
-if (null || -1 && 1) alert( 'third' );
+if (-1 || 0) console.log( 'first' );
+if (-1 && 0) console.log( 'second' );
+if (null || -1 && 1) console.log( 'third' );
 ```
 
 
