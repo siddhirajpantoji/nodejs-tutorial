@@ -346,3 +346,34 @@ To make an "infinite" loop, usually the `while(true)` construct is used. Such a 
 If we don't want to do anything in the current iteration and would like to forward to the next one, we can use the `continue` directive.
 
 
+## Test your knowledge 
+1. Accept input from user as a number and print all odd numbers till that number 
+2. Accept num of lines from user and print below pattern ( Considering number as 5 )
+```
+*
+* *
+* * *
+* * * *
+* * * * *
+
+* * * * *
+* * * *
+* * *
+* *
+*
+
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
+
+* * * * *
+  * * * *
+    * * *
+      * *
+        *
+
+
+```
+
