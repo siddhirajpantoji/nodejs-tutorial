@@ -33,7 +33,8 @@ const sidebars = {
       "Basics/if-else",
       "Basics/logical-operators",
       "Basics/loops",
-      "Basics/switch"
+      "Basics/switch",
+      "Basics/basic-functions"
     ]
     
   }]
