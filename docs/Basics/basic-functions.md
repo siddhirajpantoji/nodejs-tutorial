@@ -153,12 +153,14 @@ We can pass arbitrary data to functions using parameters.
 In the example below, the function has two parameters: `from` and `text`.
 
 ```js run
-function showMessage(*!*from, text*/!*) { // parameters: from, text
+// highlight-next-line
+function showMessage(from, text) { // parameters: from, text
   console.log(from + ': ' + text);
 }
-
-*!*showMessage('Shree', 'Hello!');*/!* // Shree: Hello! (*)
-*!*showMessage('Shree', "What's up?");*/!* // Shree: What's up? (**)
+// highlight-start
+showMessage('Shree', 'Hello!'); // Shree: Hello! (*)
+showMessage('Shree', "What's up?"); // Shree: What's up? (**)
+//highligh-end
 ```
 
 When the function is called in lines `(*)` and `(**)`, the given values are copied to local variables `from` and `text`. Then the function uses them.
@@ -168,9 +170,8 @@ Here's one more example: we have a variable `from` and pass it to the function. 
 ```js run
 function showMessage(from, text) {
 
-*!*
+// highlight-next-line
   from = '*' + from + '*'; // make "from" look nicer
-*/!*
 
   console.log( from + ': ' + text );
 }
@@ -210,7 +211,8 @@ That's not an error. Such a call would output `"*Shree*: undefined"`. As the val
 We can specify the so-called "default" (to use if omitted) value for a parameter in the function declaration, using `=`:
 
 ```js run
-function showMessage(from, *!*text = "no text given"*/!*) {
+// highlight-next-line
+function showMessage(from, text = "no text given") {
   console.log( from + ": " + text );
 }
 
@@ -234,15 +236,15 @@ function showMessage(from, text = anotherFunction()) {
 }
 ```
 
-```smart header="Evaluation of default parameters"
+:::note Evaluation of default parameters
 In JavaScript, a default parameter is evaluated every time the function is called without the respective parameter.
 
 In the example above, `anotherFunction()` isn't called at all, if the `text` parameter is provided.
 
 On the other hand, it's independently called every time when `text` is missing.
-```
+:::
 
-````smart header="Default parameters in old JavaScript code"
+:::tip Default parameters in old JavaScript code
 Several years ago, JavaScript didn't support the syntax for default parameters. So people used other ways to specify them.
 
 Nowadays, we can come across them in old scripts.
@@ -251,11 +253,10 @@ For example, an explicit check for `undefined`:
 
 ```js
 function showMessage(from, text) {
-*!*
+  // highlight-next-line
   if (text === undefined) {
     text = 'no text given';
   }
-*/!*
 
   console.log( from + ": " + text );
 }
@@ -271,7 +272,7 @@ function showMessage(from, text) {
   ...
 }
 ```
-````
+:::
 
 
 ### Alternative default parameters
@@ -284,11 +285,11 @@ We can check if the parameter is passed during the function execution, by compar
 function showMessage(text) {
   // ...
 
-*!*
+//highlight-start
   if (text === undefined) { // if the parameter is missing
     text = 'empty message';
   }
-*/!*
+//highlight-end
 
   console.log(text);
 }
@@ -327,7 +328,8 @@ The simplest example would be a function that sums two values:
 
 ```js run no-beautify
 function sum(a, b) {
-  *!*return*/!* a + b;
+// highlight-next-line
+  return a + b;
 }
 
 let result = sum(1, 2);
@@ -341,17 +343,17 @@ There may be many occurrences of `return` in a single function. For instance:
 ```js run
 function checkAge(age) {
   if (age >= 18) {
-*!*
+    // highlight-next-line
     return true;
-*/!*
   } else {
-*!*
-    return confirm('Do you have permission from your parents?');
-*/!*
+// highlight-next-line
+    console.log("Come back after You are 18 dear. We will keep this Show running :P ")
+// highlight-next-line
+    return false
   }
 }
 
-let age = prompt('How old are you?', 18);
+let age = parseInt(process.argv[2]);
 
 if ( checkAge(age) ) {
   console.log( 'Access granted' );
@@ -367,9 +369,8 @@ For example:
 ```js
 function showMovie(age) {
   if ( !checkAge(age) ) {
-*!*
+    // highlight-next-line
     return;
-*/!*
   }
 
   console.log( "Showing you the movie" ); // (*)
@@ -379,7 +380,7 @@ function showMovie(age) {
 
 In the code above, if `checkAge(age)` returns `false`, then `showMovie` won't proceed to the `console.log`.
 
-````smart header="A function with an empty `return` or without it returns `undefined`"
+:::tip "A function with an empty `return` or without it returns `undefined`"
 If a function does not return a value, it is the same as if it returns `undefined`:
 
 ```js run
@@ -397,9 +398,9 @@ function doNothing() {
 
 console.log( doNothing() === undefined ); // true
 ```
-````
+:::
 
-````warn header="Never add a newline between `return` and the value"
+:::warning Never add a newline between `return` and the value
 For a long expression in `return`, it might be tempting to put it on a separate line, like this:
 
 ```js
@@ -425,9 +426,9 @@ return (
   )
 ```
 And it will work just as we expect it to.
-````
+:::
 
-## Naming a function [#function-naming]
+## Naming a function
 
 Functions are actions. So their name is usually a verb. It should be brief, as accurate as possible and describe what the function does, so that someone reading the code gets an indication of what the function does.
 
@@ -444,7 +445,7 @@ Function starting with...
 
 Examples of such names:
 
-```js no-beautify
+```js 
 showMessage(..)     // shows a message
 getAge(..)          // returns the age (gets it somehow)
 calcSum(..)         // calculates a sum and returns the result
@@ -454,7 +455,7 @@ checkPermission(..) // checks a permission, returns true/false
 
 With prefixes in place, a glance at a function name gives an understanding what kind of work it does and what kind of value it returns.
 
-```smart header="One function -- one action"
+:::tip One function -- one action
 A function should do exactly what is suggested by its name, no more.
 
 Two independent actions usually deserve two functions, even if they are usually called together (in that case we can make a 3rd function that calls those two).
@@ -466,15 +467,15 @@ A few examples of breaking this rule:
 - `checkPermission` -- would be bad if it displays the `access granted/denied` message (should only perform the check and return the result).
 
 These examples assume common meanings of prefixes. You and your team are free to agree on other meanings, but usually they're not much different. In any case, you should have a firm understanding of what a prefix means, what a prefixed function can and cShreeot do. All same-prefixed functions should obey the rules. And the team should share the knowledge.
-```
+:::
 
-```smart header="Ultrashort function names"
+:::tip Ultrashort function names
 Functions that are used *very often* sometimes have ultrashort names.
 
 For example, the [jQuery](https://jquery.com/) framework defines a function with `$`. The [Lodash](https://lodash.com/) library has its core function named `_`.
 
 These are exceptions. Generally function names should be concise and descriptive.
-```
+:::
 
 ## Functions == Comments
 
