@@ -34,7 +34,8 @@ const sidebars = {
       "Basics/logical-operators",
       "Basics/loops",
       "Basics/switch",
-      "Basics/basic-functions"
+      "Basics/basic-functions",
+      "Basics/arrow-functions"
     ]
     
   }]

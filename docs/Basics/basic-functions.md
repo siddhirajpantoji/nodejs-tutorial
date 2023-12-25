@@ -110,11 +110,11 @@ function showMessage() {
   console.log(message);
 }
 
-console.log( userName ); // *!*Ram*/!* before the function call
+console.log( userName ); // Ram before the function call
 
 showMessage();
 
-console.log( userName ); // *!*Laxman*/!*, the value was modified by the function
+console.log( userName ); // Laxman , the value was modified by the function
 ```
 
 The outer variable is only used if there's no local one.
@@ -135,7 +135,7 @@ function showMessage() {
 // the function will create and use its own userName
 showMessage();
 
-console.log( userName ); // *!*Ram*/!*, unchanged, the function did not access the outer variable
+console.log( userName ); // Ram, unchanged, the function did not access the outer variable
 ```
 
 :::tip Global variables
@@ -160,7 +160,7 @@ function showMessage(from, text) { // parameters: from, text
 // highlight-start
 showMessage('Shree', 'Ram '); // Shree: Ram (*)
 showMessage('Shree', "Laxman "); // Shree: Laxman (**)
-//highligh-end
+// highlight-end
 ```
 
 When the function is called in lines `(*)` and `(**)`, the given values are copied to local variables `from` and `text`. Then the function uses them.
