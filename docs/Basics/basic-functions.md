@@ -23,7 +23,7 @@ It looks like this:
 
 ```js
 function showMessage() {
-  console.log( 'Hello everyone!' );
+  console.log( 'Shri Ram ' );
 }
 ```
 
@@ -41,7 +41,7 @@ For instance:
 
 ```js run
 function showMessage() {
-  console.log( 'Hello everyone!' );
+  console.log( 'Jai Sankat Mochan ' );
 }
 
 // highlight-start
@@ -65,12 +65,12 @@ For example:
 ```js run
 function showMessage() {
 // highlight-next-line
-  let message = "Hello, I'm JavaScript!"; // local variable
+  let message = "Har Har Mahadev."; // local variable
 
   console.log( message );
 }
 
-showMessage(); // Hello, I'm JavaScript!
+showMessage(); // Har Har Mahadev.
 
 // error-next-line
 console.log( message ); // <-- Error! The variable is local to the function
@@ -82,15 +82,15 @@ A function can access an outer variable as well, for example:
 
 ```js 
 //highlight-next-line
-let userName = 'Ram';
+let userName = 'Shri Ram';
 
 function showMessage() {
   //highlight-next-line
-  let message = 'Hello, ' +  userName;
+  let message = 'Jai , ' +  userName;
   console.log(message);
 }
 
-showMessage(); // Hello, Ram
+showMessage(); // Jai, Shri Ram
 ```
 
 The function has full access to the outer variable. It can modify it as well.
@@ -158,8 +158,8 @@ function showMessage(from, text) { // parameters: from, text
   console.log(from + ': ' + text);
 }
 // highlight-start
-showMessage('Shree', 'Hello!'); // Shree: Hello! (*)
-showMessage('Shree', "What's up?"); // Shree: What's up? (**)
+showMessage('Shree', 'Ram '); // Shree: Ram (*)
+showMessage('Shree', "Laxman "); // Shree: Laxman (**)
 //highligh-end
 ```
 
@@ -193,7 +193,7 @@ In other words, to put these terms straight:
 
 We declare functions listing their parameters, then call them passing arguments.
 
-In the example above, one might say: "the function `showMessage` is declared with two parameters, then called with two arguments: `from` and `"Hello"`".
+In the example above, one might say: "the function `showMessage` is declared with two parameters, then called with two arguments: `from` and `"Hanuman"`".
 
 
 ## Default values
@@ -212,22 +212,22 @@ We can specify the so-called "default" (to use if omitted) value for a parameter
 
 ```js run
 // highlight-next-line
-function showMessage(from, text = "no text given") {
+function showMessage(from, text = "Ram Ram Jai Rajaram ") {
   console.log( from + ": " + text );
 }
 
-showMessage("Shree"); // Shree: no text given
+showMessage("Shree"); // Shree: Ram Ram Jai Rajaram 
 ```
 
-Now if the `text` parameter is not passed, it will get the value `"no text given"`.
+Now if the `text` parameter is not passed, it will get the value `"Ram Ram Jai Rajaram "`.
 
 The default value also jumps in if the parameter exists, but strictly equals `undefined`, like this:
 
 ```js
-showMessage("Shree", undefined); // Shree: no text given
+showMessage("Shree", undefined); // Shree: Ram Ram Jai Rajaram 
 ```
 
-Here `"no text given"` is a string, but it can be a more complex expression, which is only evaluated and assigned if the parameter is missing. So, this is also possible:
+Here `"Ram Ram Jai Rajaram "` is a string, but it can be a more complex expression, which is only evaluated and assigned if the parameter is missing. So, this is also possible:
 
 ```js run
 function showMessage(from, text = anotherFunction()) {
@@ -255,7 +255,7 @@ For example, an explicit check for `undefined`:
 function showMessage(from, text) {
   // highlight-next-line
   if (text === undefined) {
-    text = 'no text given';
+    text = 'Ram Ram Jai Rajaram ';
   }
 
   console.log( from + ": " + text );
@@ -268,7 +268,7 @@ function showMessage(from, text) {
 function showMessage(from, text) {
   // If the value of text is falsy, assign the default value
   // this assumes that text == "" is the same as no text at all
-  text = text || 'no text given';
+  text = text || 'Ram Ram Jai Rajaram ';
   ...
 }
 ```
@@ -301,8 +301,8 @@ showMessage(); // empty message
 
 ```js
 function showMessage(text) {
-  // if text is undefined or otherwise falsy, set it to 'empty'
-  text = text || 'empty';
+  // if text is undefined or otherwise falsy, set it to 'Ram Ram'
+  text = text || 'Ram Ram';
   ...
 }
 ```
