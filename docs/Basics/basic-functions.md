@@ -39,7 +39,7 @@ Our new function can be called by its name: `showMessage()`.
 
 For instance:
 
-```js run
+```js
 function showMessage() {
   console.log( 'Jai Sankat Mochan ' );
 }
@@ -61,16 +61,15 @@ If we ever need to change the message or the way it is shown, it's enough to mod
 A variable declared inside a function is only visible inside that function.
 
 For example:
-
-```js run
-function showMessage() {
+Inside `shivShambho` function we can say proudly `Har Har Mahadev.`
+```js 
+function shivShambho() {
 // highlight-next-line
   let message = "Har Har Mahadev."; // local variable
-
   console.log( message );
 }
 
-showMessage(); // Har Har Mahadev.
+shivShambho(); // Har Har Mahadev.
 
 // error-next-line
 console.log( message ); // <-- Error! The variable is local to the function
@@ -97,7 +96,7 @@ The function has full access to the outer variable. It can modify it as well.
 
 For instance:
 
-```js run
+```js
 //highlight-next-line
 let userName = 'Ram';
 
